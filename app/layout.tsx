@@ -1,6 +1,9 @@
+'use client'
+
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { usePathname, useRouter } from 'next/navigation'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,10 +17,23 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+
+  const currPage = usePathname()
+
+  let backgroundColor = "";
+
+  if (currPage === "/") {
+    backgroundColor = "bg-[#566165]"
+  } else if (currPage === "/projects") {
+    backgroundColor = "bg-[#E1E7C6]"
+  } else if (currPage === "/contact") {
+    backgroundColor = "bg-[#566165]"
+  }
+
   return (
-    <html lang="en">
+    <html lang="en" className={`${backgroundColor}`}>
       <Navbar></Navbar>
-      <main>{children}</main>
+      <div className='w-full h-[500px]'>{children}</div>
     </html>
   )
 }

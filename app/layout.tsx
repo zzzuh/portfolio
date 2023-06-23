@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${backgroundColor}`}>
       <Navbar></Navbar>
-      <div className='w-full h-[500px]'>{children}</div>
+      <div>{children}</div>
     </html>
   )
 }

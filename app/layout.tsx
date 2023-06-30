@@ -31,7 +31,7 @@ export default function RootLayout({
   }
 
   return (
-    <html lang="en" className={`${backgroundColor}`}>
+    <html lang="en" className="bg-[#566165]">
       <Navbar></Navbar>
       <div>{children}</div>
     </html>

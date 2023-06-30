@@ -1,5 +1,3 @@
-import Cloud from "@/components/Cloud";
-import Header from "@/components/Header";
 import SocialButton from "@/components/SocialButton";
 
 export default function Home() {
